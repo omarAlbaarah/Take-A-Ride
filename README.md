@@ -1,2 +1,2 @@
 # Take-A-Ride 
-is an Web App that will help people find a luxury car to serve them in Washington state roadtrips.
+luxury car services responsive web applications that will helps people to find a luxury car services based on Seattle!
