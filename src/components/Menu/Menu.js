@@ -8,7 +8,16 @@
                      <a href='#intro'>Home</a>
                  </li>
                  <li onClick={()=> setMenuOpen(false)}>
-                     <a href='#contact'>Contact</a>
+                     <a href='#ourCars'>Our Cars</a>
+                 </li>
+                 <li onClick={()=> setMenuOpen(false)}>
+                     <a href='#contact'>Book Now</a>
+                 </li>
+                 {/* <li onClick={()=> setMenuOpen(false)}>
+                     <a href='#aboutUs'>AboutUs</a>
+                 </li> */}
+                 <li onClick={()=> setMenuOpen(false)}>
+                     <a href='#aboutus'>About us</a>
                  </li>
              </ul>
          </div>

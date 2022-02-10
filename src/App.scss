@@ -1,17 +1,16 @@
 .app{
-    height: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
     .sections{
-        width: 100%;
-        height: calc(100vh - 70px);
+        width: 100;
+        height: 100vh;
         background-color: whitesmoke;
         position: relative;
         top: 70px;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-        > * {
-            width: 100vw;
-            height: calc(100vh - 70px);
-            scroll-snap-align: start;
-        }
+        // overflow-y: hidden;
+    }
+    a{
+        color: #15023a;
+        text-decoration: none;
     }
 }

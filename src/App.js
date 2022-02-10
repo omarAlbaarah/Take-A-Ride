@@ -1,10 +1,13 @@
-import TopBar from "./components/Topbar/Topbar";
-import Intro from "./components/Intro/Intro";
-import Contact from "./components/Contact/Contact";
-import './App.scss';
-import Menu from './components/Menu/Menu';
 import {useState} from "react";
-import Map from './components/Map/Map';
+import './App.scss';
+import Intro from "./components/Intro/Intro";
+import ContactForm from "./components/Contact/ContactForm";
+import TopBar from "./components/Topbar/Topbar";
+import OurCars from './components/OurCars/OurCars';
+import Menu from './components/Menu/Menu';
+import Toast from "./components/Shared/Toast";
+import AboutUs from "./components/AboutUs/AboutUs";
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -13,9 +16,11 @@ function App() {
       <Menu menuOpen = {menuOpen} setMenuOpen = {setMenuOpen}/>
       <div className="sections">
         <Intro/>
-        <Map/>
-        <Contact/>
+        <OurCars/>
+        <ContactForm/>
+        <AboutUs/>
       </div>
+      <Toast/>
     </div>
   );
 }
