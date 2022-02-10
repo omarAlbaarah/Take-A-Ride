@@ -26,7 +26,7 @@
                 color: inherit;
                 margin-right: 25px;
             }
-            .logo-test{
+            .logo-image{
                 max-width: 70px;
                 max-height: 70px;
             }
@@ -105,6 +105,10 @@
                     text-decoration: none;
                     color: inherit;
                     margin-right: 20px;
+                }
+                .logo-image{
+                    max-width: 50px;
+                    max-height: 50px;
                 }
                 .itemContainer{
                     display: flex;

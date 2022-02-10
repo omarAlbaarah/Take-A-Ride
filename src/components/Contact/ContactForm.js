@@ -85,13 +85,13 @@ const ContactForm = () => {
                     <p>Book now, and we will be back shortly with a confirmation call!</p>
                     <form onSubmit={handleSubmit}>
                         <div className="input-box">
-                            <input type="text" name = "name" placeholder="Enter your name" value={fullName} onChange={e => setFullName(e.target.value)} />
+                            <input type="text" name = "name" required placeholder="Enter your name" value={fullName} onChange={e => setFullName(e.target.value)} />
                         </div>
                         <div className="input-box">
-                            <input type="email" name = "email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} />
+                            <input type="email" name = "email" required placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} />
                         </div>
                         <div className="input-box">
-                            <input type="tel" name = "phoneNumber" placeholder="Enter phone number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
+                            <input type="tel" name = "phoneNumber" required required placeholder="Enter phone number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
                         </div>
                         <div className="input-box">
                             <PlaceAutocomplete address={pickupAddress} name="pickupAddress" placeholder={"Pickup from"} onChange={handlePickUpAddressChanges} />
@@ -100,11 +100,11 @@ const ContactForm = () => {
                             <PlaceAutocomplete address={dropOffAddress} name='dropoffAddress' placeholder={"Drop off at"} onChange={handleDropOffAddressChanges} />
                         </div>
                         <div className="input-box">
-                            <input type="date" min="2022-02-01" name='pickupDate' value={pickupDate} onChange={e => setPickupDate(e.target.value)} />
+                            <input type="date" min="2022-02-01" required name='pickupDate' value={pickupDate} onChange={e => setPickupDate(e.target.value)} />
 
                         </div>
                         <div className="input-box">
-                            <input type="time" name='pickupTime' value={pickupTime} onChange={e => setPickupTime(e.target.value)} />
+                            <input type="time" name='pickupTime' required value={pickupTime} onChange={e => setPickupTime(e.target.value)} />
                         </div>
                         <div className="input-box message-box">
                             <textarea rows="5" cols="20" type="text" name='message' placeholder='Additional information, You can also write your special requests here.' value={message} onChange={e => setMessage(e.target.value)} />

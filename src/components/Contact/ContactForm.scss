@@ -95,4 +95,25 @@
     background: #5029bc;
   }
 }
+@media (max-width: 800px){
 
+  .contact-content .left-side .details i{
+    font-size: 20px;
+  }
+  .contact-content .left-side .details .topic{
+    font-size: 10px;
+  }
+  .contact-content .left-side .details .text-one{
+    font-size: 10px;
+  }
+  .contact-content .right-side .topic-text{
+    font-size: 15px;
+  }
+  .right-side .input-box input,
+.right-side .input-box textarea{
+  width: 10rem;
+}
+  .right-side .button button{
+    font-size: 12px;
+  }
+}

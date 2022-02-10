@@ -11,7 +11,7 @@ import Email from '@mui/icons-material/Email';
         <div className={'topBar ' +(menuOpen && 'active')}>
             <div className='wrapper'>
                 <div className='left'>
-                    <a href='#intro' className='logo'><img className='logo-test' src={logo}></img></a>
+                    <a href='#intro' className='logo'><img className='logo-image' src={logo}></img></a>
                     <div className='itemContainer'>
                         <Phone className='icon'/>
                         <span ><a href = "tel:+12069090804">+1(206) 909-0804</a></span>
