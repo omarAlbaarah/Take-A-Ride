@@ -32,9 +32,6 @@ const ContactForm = () => {
         
         target.appendChild(pickupInput);
         target.appendChild(dropoffInput);
-        console.log(process.env.REACT_APP_SERVICE_ID)
-        console.log(process.env.REACT_APP_TEMPLATE_ID)
-        console.log(process.env.REACT_APP_USER_ID)
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, target, process.env.REACT_APP_USER_ID)
             .then((result) => {
                 alert("Message Sent, We will get back to you shortly", result.text);
