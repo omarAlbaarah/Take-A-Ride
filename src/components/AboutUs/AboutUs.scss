@@ -18,10 +18,11 @@
         align-items: center;
         justify-content: space-between;
             .footer-title{
-                font-size: 35px;
+                font-size: 25px;
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
+                display: flex;
                 margin-right: 30px;
             }
             .footer-items{
@@ -35,7 +36,7 @@
     
 }
 
-@media (max-width: 900px){
+@media (max-width: 800px){
         .footer-wrapper{
             .footer-title{
                 font-size: 15px;

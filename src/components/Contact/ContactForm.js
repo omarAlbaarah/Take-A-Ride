@@ -3,10 +3,15 @@ import emailjs from 'emailjs-com'
 import PlaceAutocomplete from "./PlaceAutoComplete";
 import './ContactForm.scss'
 
-
+const cars = {
+    'Select car': 'none',
+    SUV: "SUV",
+    Sedan: "Sedan",
+    Van: "van"
+}
 
 const ContactForm = () => {
- 
+
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -15,11 +20,10 @@ const ContactForm = () => {
     const [dropOffAddress, setDropOffAddress] = useState("");
     const [pickupDate, setPickupDate] = useState("");
     const [pickupTime, setPickupTime] = useState("");
-
-
+    const [car, setCar] = useState(cars['Select car']);
 
     const handleSubmit = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         var pickupInput = document.createElement("input");
         pickupInput.type = "text";
         pickupInput.name = "pickupAddress";
@@ -28,10 +32,15 @@ const ContactForm = () => {
         dropoffInput.type = "text";
         dropoffInput.name = "dropoffAddress";
         dropoffInput.setAttribute('value', dropOffAddress);
+        var selectedCar = document.createElement("input");
+        selectedCar.type = "text";
+        selectedCar.name = "car";
+        selectedCar.setAttribute('value', car);
         let target = e.target.cloneNode(true);
-        
+
         target.appendChild(pickupInput);
         target.appendChild(dropoffInput);
+        target.appendChild(selectedCar);
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, target, process.env.REACT_APP_USER_ID)
             .then((result) => {
                 alert("Message Sent, We will get back to you shortly", result.text);
@@ -47,7 +56,7 @@ const ContactForm = () => {
                 (error) => {
                     alert("An error occurred, Please try again", error.text);
                 });
-               target = undefined;
+        target = undefined;
     }
 
     const handlePickUpAddressChanges = (address) => {
@@ -85,13 +94,20 @@ const ContactForm = () => {
                     <p>Book now, and we will be back shortly with a confirmation call!</p>
                     <form onSubmit={handleSubmit}>
                         <div className="input-box">
-                            <input type="text" name = "name" required placeholder="Enter your name" value={fullName} onChange={e => setFullName(e.target.value)} />
+                            <input type="text" name="name" required placeholder="Enter your name" value={fullName} onChange={e => setFullName(e.target.value)} />
                         </div>
                         <div className="input-box">
-                            <input type="email" name = "email" required placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} />
+                            <input type="email" name="email" required placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} />
                         </div>
                         <div className="input-box">
-                            <input type="tel" name = "phoneNumber" required required placeholder="Enter phone number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
+                            <input type="tel" name="phoneNumber" required required placeholder="Enter phone number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
+                        </div>
+                        <div className="input-box">
+                            <select value={car} onChange={e => setCar(e.target.value)}>
+                                {Object.entries(cars).map(c => (
+                                    <option value={c[1]}>{c[0]}</option>
+                                ))}
+                            </select>
                         </div>
                         <div className="input-box">
                             <PlaceAutocomplete address={pickupAddress} name="pickupAddress" placeholder={"Pickup from"} onChange={handlePickUpAddressChanges} />
