@@ -4,10 +4,7 @@ import PlacesAutocomplete, {
   getLatLng
 } from "react-places-autocomplete";
 
-
-
 const PlaceAutoComplete = (props) => {
-    // const [address, setAddress] = useState("");
     const [coordinates, setCoordinates] = useState({
         lat: null,
         lng: null
@@ -28,8 +25,7 @@ const PlaceAutoComplete = (props) => {
           >
             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
               <>
-                {/* <p>Latitude: {coordinates.lat}</p>
-                <p>Longitude: {coordinates.lng}</p> */}
+               
     
                 <input className="location-input" style={{
                   height: suggestions ? '100% !important': '50px'
