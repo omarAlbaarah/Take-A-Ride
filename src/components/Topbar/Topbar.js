@@ -2,7 +2,7 @@ import React from 'react';
 import './Topbar.scss';
 import Car from '@mui/icons-material/CarRental';
 import Phone from '@mui/icons-material/Phone';
-
+import logo from './logo2.png';
 import Email from '@mui/icons-material/Email';
 
 
@@ -11,7 +11,7 @@ import Email from '@mui/icons-material/Email';
         <div className={'topBar ' +(menuOpen && 'active')}>
             <div className='wrapper'>
                 <div className='left'>
-                    <a href='#intro' className='logo'>Travel Safe<Car className='icon'/></a>
+                    <a href='#intro' className='logo'><img className='logo-test' src={logo}></img></a>
                     <div className='itemContainer'>
                         <Phone className='icon'/>
                         <span ><a href = "tel:+12069090804">+1(206) 909-0804</a></span>
