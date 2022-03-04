@@ -75,10 +75,10 @@ const ContactForm = () => {
                         <div className="text-one">Seattle, WA</div>
                     </div>
                     <div className="details">
-                        <a href="tel:+12069090804">
+                        <a href="tel:+12062760792">
                             <i className="fas fa-phone-alt"></i>
                             <div className="topic">Phone</div>
-                            <div className="text-one">+1(206) 909-0804</div>
+                            <div className="text-one">+1(206)276-0792</div>
                         </a>
                     </div>
                     <div className="details">
@@ -116,11 +116,11 @@ const ContactForm = () => {
                             <PlaceAutocomplete address={dropOffAddress} name='dropoffAddress' placeholder={"Drop off at"} onChange={handleDropOffAddressChanges} />
                         </div>
                         <div className="input-box">
-                            <input type="date" min="2022-02-01" required name='pickupDate' value={pickupDate} onChange={e => setPickupDate(e.target.value)} />
+                            <input type="date" min="2022-02-01" required name='pickupDate' id='pickupDate' value={pickupDate} onChange={e => setPickupDate(e.target.value)} />
 
                         </div>
                         <div className="input-box">
-                            <input type="time" name='pickupTime' required value={pickupTime} onChange={e => setPickupTime(e.target.value)} />
+                            <input type="time" name='pickupTime' id='pickupTime' required value={pickupTime} onChange={e => setPickupTime(e.target.value)} />
                         </div>
                         <div className="input-box message-box">
                             <textarea rows="5" cols="20" type="text" name='message' placeholder='Additional information, You can also write your special requests here.' value={message} onChange={e => setMessage(e.target.value)} />

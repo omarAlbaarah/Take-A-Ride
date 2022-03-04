@@ -7,7 +7,12 @@
   margin: 2px auto;
   overflow-y: hidden;
 }
-
+#pickupDate:before {
+  content:'Pickup Date:';
+}
+#pickupTime:before {
+  content:'Pickup Time:';
+}
 .contact-wrapper .contact-content{
   background: #c3c1cc;
   display: flex;
@@ -63,6 +68,9 @@
 .right-side .input-box{
   //  margin: 10px ;
    padding: 0.3rem;
+}
+#pickupTime:before {
+  content:'Pickup Time:';
 }
 .right-side .input-box input,
 .right-side .input-box textarea,

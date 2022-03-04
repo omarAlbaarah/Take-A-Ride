@@ -14,7 +14,7 @@ import Email from '@mui/icons-material/Email';
                     <a href='#intro' className='logo'><img className='logo-image' src={logo}></img></a>
                     <div className='itemContainer'>
                         <Phone className='icon'/>
-                        <span ><a href = "tel:+12069090804">+1(206) 909-0804</a></span>
+                        <span ><a href = "tel:+12062760792">+1(206)276-0792</a></span>
                        
                     </div>
                     <div className='itemContainer'>
