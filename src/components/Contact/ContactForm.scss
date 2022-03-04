@@ -96,23 +96,31 @@ select{
     background: #5029bc;
   }
 }
-@media (max-width: 800px){
+@media (max-width: 600px){
 
   .contact-content .left-side .details i{
     font-size: 20px;
   }
   .contact-content .left-side .details .topic{
-    font-size: 10px;
+    font-size: 6px;
   }
   .contact-content .left-side .details .text-one{
-    font-size: 10px;
+    font-size: 4px;
   }
   .contact-content .right-side .topic-text{
-    font-size: 15px;
+    font-size: 10px;
+    
   }
+  .contact-content .right-side .topic-text-sub{
+    font-size: 8px;
+    
+  }
+ 
   .right-side .input-box input,
+  .right-side .input-box select,
 .right-side .input-box textarea{
   width: 10rem;
+  font-size: 10px;
 }
   .right-side .button button{
     font-size: 12px;

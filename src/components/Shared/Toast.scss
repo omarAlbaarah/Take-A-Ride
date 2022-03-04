@@ -6,14 +6,15 @@
   body {
     background-color: #f6f6f8;
     font-family: Poppins;
+  
   }
-  .wrapper-success {
+  .wrapper-success-t {
     position: fixed;
     bottom: 2em;
     left: 2em;
-
+    overflow-y: hidden;
   }
-  .wrapper-success .card {
+  .wrapper-success-t .card-t {
     width: 300px;
     height: 85px;
     background-color: #fff;
@@ -25,18 +26,19 @@
     border-left: 5px solid #15023a;
     border-radius: 3px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow-y: hidden;
   }
-  .wrapper-success .card .icon {
+  .wrapper-success-t .card-t .icon-t {
     font-size: 28px;
     color: #15023a;
   }
-  .wrapper-success .card .icon-times {
+  .wrapper-success-t .card-t .icon-times {
     font-size: 28px;
     color: #c3c2c7;
     cursor: pointer;
   }
   @media (max-width: 900px) {
-    .wrapper-success .card{
+    .wrapper-success-t .card-t{
       overflow-y: hidden;
       width: 200px;
       height: 50px;
@@ -50,11 +52,20 @@
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     }
-    .wrapper-success .card .icon {
+    .wrapper-success-t .card-t .icon-t {
       font-size: 20px;
       color: #15023a;
     }
-    .wrapper-success .card .icon-times {
+    .wrapper-success-t .card-t .subject-t {
+      font-size: 18px;
+      padding-top: 2px;
+      
+    }
+    .wrapper-success-t .card-t .subject-t2 {
+      text-decoration: none;
+      
+    }
+    .wrapper-success-t .card-t .icon-times {
       font-size: 20px;
       color: #c3c2c7;
       cursor: pointer;

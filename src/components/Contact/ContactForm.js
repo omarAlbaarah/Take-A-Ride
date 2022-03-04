@@ -69,29 +69,29 @@ const ContactForm = () => {
         <div className='contact-wrapper' id='contact'>
             <div className='contact-content'>
                 <div className="left-side">
-                    <div className="address details">
+                    <div className="details">
                         <i className="fas fa-map-marker-alt"></i>
                         <div className="topic">Address</div>
                         <div className="text-one">Seattle, WA</div>
                     </div>
-                    <div className="phone details">
+                    <div className="details">
                         <a href="tel:+12069090804">
                             <i className="fas fa-phone-alt"></i>
                             <div className="topic">Phone</div>
                             <div className="text-one">+1(206) 909-0804</div>
                         </a>
                     </div>
-                    <div className="email details">
+                    <div className="details">
                         <a href="mailto:seattle.travelsafe@gmail.com" >
                             <i className="fas fa-envelope"></i>
                             <div className="topic">Email</div>
-                            <div className="text-one">seattle.travelsafe@gmail.com</div>
+                            <div className="text-one"></div>
                         </a>
                     </div>
                 </div>
                 <div className="right-side">
                     <div className="topic-text">Request a ride</div>
-                    <p>Book now, and we will be back shortly with a confirmation call!</p>
+                    <p className='topic-text-sub'>Book now, and we will be back shortly with a confirmation call!</p>
                     <form onSubmit={handleSubmit}>
                         <div className="input-box">
                             <input type="text" name="name" required placeholder="Enter your name" value={fullName} onChange={e => setFullName(e.target.value)} />

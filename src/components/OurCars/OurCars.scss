@@ -5,3 +5,11 @@
     overflow-y: hidden;
     margin: 0 auto;
 }
+
+@media (max-width: 600px){
+    .cars-wrapper{
+        height: fit-content;
+        overflow-y: hidden;
+        margin: 0 auto;
+    }
+}
